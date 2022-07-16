@@ -9,6 +9,7 @@ export interface ActivityRequest {
 }
 
 export interface ActivityResponse {
+  id: string;
   offer: Offer[];
 }
 

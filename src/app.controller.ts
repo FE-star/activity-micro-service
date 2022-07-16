@@ -18,6 +18,7 @@ export class AppController implements ActivityServiceController {
     console.log('req === ', req, list)
 
     return {
+      id: req.id,
       offer: list
     }
   }
