@@ -15,7 +15,16 @@ export class AppController implements ActivityServiceController {
     const start = Math.random() * 40 | 0
     const list = this.offers.slice(start, start + 20)
 
-    console.log('req === ', req, list)
+    // console.log('req === ', req, list)
+
+    console.log('response === ', {
+      id: req.id,
+      offer: list
+    })
+
+    if (req.id === '123') {
+      throw new Error('something error happened')
+    }
 
     return {
       id: req.id,
